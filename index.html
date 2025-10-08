@@ -3,28 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Music app</title>
+  <title>My Music Player</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="main">
-    <div class="main__songs">Here songs will be displayed</div>
-    <div class="main__playlists">Here playlists will be displayed</div>
-    
-    <div class="player">
-      <div class="seek-bar">
-        <input type="range" name="" id="thumb" value="0">
+  <nav class="navbar">
+    <!-- navbar section -->
+     This is navbar
+  </nav>
+
+  <main class="main">
+    <!-- main content section -->
+
+
+      <!-- Now playing section (sidebar) -->
+      <div class="sidebar">
+        <h2>Now playing</h2>
       </div>
-      <div class="others">
-        <div class="main-controls">
-          <img id="prev-btn" src="./images/previous.svg" alt="" height="20">
-          <img id="play-pause-btn" src="./images/play.svg" alt="" height="20">
-          <img id="next-btn" src="./images/next.svg" alt="" height="20">
-        </div>
-        <div class="current-song">Current song</div>
-        <div class="other-controls">other Controls</div>
+
+      <!-- Playlist section (content area) -->
+      <div class="content">
+        <h2>Playlist</h2>
       </div>
-    </div>
-  </div>
+
+  </main>
+  
+  <footer class="player">
+    <!-- footer section (Player) -->
+     this is player
+  </footer>
 </body>
 </html>
