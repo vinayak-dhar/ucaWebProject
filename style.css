@@ -205,6 +205,59 @@ body {
   border-radius: 4px;
 }
 
+.playlist-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s;
+  cursor: pointer;
+  width: 100%;
+}
+
+.playlist-cover {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-right: 15px;
+  filter: brightness(0.9) contrast(1.1);
+}
+
+.playlist-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* Limit max width so text doesn't take full free space */
+  max-width: 65%;
+  overflow: hidden;     /* Hide overflow */
+  white-space: nowrap;  /* Keep on one line */
+  text-overflow: ellipsis; /* Show ... if too long */
+}
+
+.playlist-title {
+  font-size: 1rem;
+  margin: 0 0 5px 0;
+  color: var(--font-color);
+}
+
+.playlist-artist {
+  font-size: 0.85rem;
+  color: rgba(230, 230, 230, 0.7);
+}
+
+/* Optional: truncate long song title and artist nicely */
+.playlist-title,
+.playlist-artist {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 /* Player Footer */
 .player {
   height: 80px;
