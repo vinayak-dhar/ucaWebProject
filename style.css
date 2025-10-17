@@ -113,6 +113,60 @@ body {
   text-align: center;
 }
 
+.sidebar .cards {
+  flex: 1;              /* take remaining height below header */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Now Playing Card */
+.now-playing-card {
+  width: 100%;
+  background: transparent;        /* remove card background */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* subtle border */
+  border-radius: 12px;
+  padding: 10px 12px;
+  text-align: center;
+  backdrop-filter: none;          /* no extra blur */
+  box-shadow: none;               /* remove internal shadows */
+  color: var(--font-color);
+
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.song-cover {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  filter: brightness(0.95) contrast(1.05);
+}
+
+.song-details {
+  font-size: 1rem;                /* slightly smaller font */
+  color: var(--font-color);
+  opacity: 0.9;
+  margin-bottom: 5px;
+}
+
+.song-title {
+  font-size: 1.1rem;
+  color: var(--font-color);
+  opacity: 0.95;
+  margin-bottom: 5px;
+}
+
+.song-artist {
+  font-size: 0.90rem;
+  color: rgba(230, 230, 230, 0.7);
+}
+
 .content {
   flex: 1;
   background: var(--bg-secondary);
@@ -226,5 +280,40 @@ body {
   /* Adjust scroll height on mobile */
   .content {
     max-height: calc(100vh - 250px);
+  }
+
+  .now-playing-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-height: auto; /* allow height to adjust */
+    padding: 10px;
+    justify-content: flex-start;
+  }
+
+  .song-cover {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 0;
+    margin-right: 15px;
+    border-radius: 12px;
+  }
+
+  .song-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .song-title {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+    color: var(--font-color);
+  }
+
+  .song-artist {
+    font-size: 0.9rem;
+    color: rgba(230, 230, 230, 0.7);
   }
 }
